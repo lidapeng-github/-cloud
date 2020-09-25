@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzp.springcloud.dao.PaymentDao">
+
+    <insert id="create" parameterType="Payment" keyProperty="id" useGeneratedKeys="true">
+        insert into mybatis.payment(serial) values (#{serial})
+    </insert>
+
+    <select id="queryById" parameterType="Long"  resultType="Payment">
+            SELECT * from mybatis.payment where id = #{id}
+    </select>
+</mapper>
