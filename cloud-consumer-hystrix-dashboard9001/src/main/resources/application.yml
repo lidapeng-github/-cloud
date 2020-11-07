@@ -1,0 +1,6 @@
+server:
+  port: 9001
+# \u89E3\u51B3Unable to connect to Command Metric Stream
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
